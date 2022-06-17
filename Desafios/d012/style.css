@@ -78,10 +78,3 @@ section#img2 {
     background-image: url(imagens/background002.jpg);
     background-position: center center;
 }
-
-footer {
-    text-align: center;
-    background-color: black;
-    padding: 10px;
-    color: white;
-}

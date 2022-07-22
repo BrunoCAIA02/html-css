@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form autocomplete="on">
+        
+            <legend>Dados Pessoais</legend>
+            <fieldset>
+                <legend>Nome</legend>
+                <p>
+                    <label for="inome"></label>
+                    <input type="text" name="nome" id="inome" required minlength="4" maxlength="25" placeholder="Digite seu nome" autocomplete="name">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>E-mail</legend>
+                <p>
+                    <label for="iemail"></label>
+                    <input type="email" name="email" id="iemail" required placeholder="Digite seu e-mail" autocomplete="email">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Telefone</legend>
+                <p>
+                    <label for="itel"></label>
+                    <input type="tel" name="tel" id="itel" required pattern="^\(\d{2}\) \d{4,5}-\d{4}$" placeholder="(xx) xxxxx-xxxx" autocomplete="tel">
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+    </form>
+</body>
+</html>

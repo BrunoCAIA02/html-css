@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Formulário com output</title>
 </head>
 <body>
-    <h1>Exemplo de Formulário</h1>
+    <h1>Formulário com output</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
         <p>
-            <label for="iano">Em que ano você nasceu? </label>
-            <input type="number" name="ano" id="iano" oninput="calcIdade()">
+            <label for="iano">Digite o ano que você nasceu: </label>
+            <input type="number" name="ano" id="iano" min="1900" max="2023" oninput="calcIdade()">
         </p>
-
         <p>
-            <label for="iidade">Idade: </label>
+            <label for="iidade">Nesse ano você já fez ou fará: </label>
             <output id="iidade">0</output>
         </p>
-        
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
@@ -26,8 +24,9 @@
     </form>
 
     <script>
-        function calcIdade() {
-            var atual = new Date().getFullYear()
+        function calcIdade()
+        {
+            let atual = new Date().getFullYear()
             iidade.innerHTML = Number(atual) - Number(iano.value)
         }
     </script>
